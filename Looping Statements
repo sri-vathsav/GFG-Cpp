@@ -1,0 +1,66 @@
+// FOR
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int i;
+    for(i = 0; i < 10; i++)
+        cout << "GfG";
+}
+
+
+//Different Statement 
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    for (int i = 0; i < 10; i=i+2)
+        cout << i << " ";
+}
+
+
+// Unlimited , unstopaable
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    for(;;)
+    {
+        cout << "GfG";
+        cout << " ";
+        i++;
+    }
+}
+
+//While
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    while (i<10)
+    {
+        cout<<"GfG";
+        cout<<" ";
+        i++;
+    }
+}
+
+
+//Do While
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    do{
+        cout << "GfG";
+        i++;
+    } while (i<0);
+}
