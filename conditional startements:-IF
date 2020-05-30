@@ -1,0 +1,20 @@
+//headerfile
+#include<iostream>
+
+using namespace std;
+// main function
+int main()
+{   
+    int n;
+    
+    cout<<"Enter a Number: ";
+    //taking Input of number to check
+    cin>>n;
+    
+    if(n<0)
+        cout<<"Invalid";
+    else
+        cout<<(n)*(n+1)/2;
+    
+    return 0;
+}
