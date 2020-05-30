@@ -1,0 +1,38 @@
+//Nested If
+#include<iostream>
+
+using namespace std;
+//Main function
+int main()
+{   
+    int age;
+    char gender;
+    
+    cout<<"Enter age"<<endl;
+    cin>>age;
+    
+    cout<<"Enter gender as 'F' or 'M'"<<endl;
+    cin>>gender;
+    
+    if(gender == 'M')
+    {
+        cout<<"Male ";
+     //nested if   
+        if(age < 18)
+            cout<<"Kid";
+        else
+            cout<<"Adult";
+    }
+    //if the gender is female then automatically the else part will be executed
+    else
+    {
+        cout<<"Female ";
+        
+        if(age < 18)
+            cout<<"Kid";
+        else
+            cout<<"Adult";
+    }
+    
+    return 0;
+}
