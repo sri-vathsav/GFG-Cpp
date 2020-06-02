@@ -1,0 +1,143 @@
+//Inline functions
+
+#include<iostream> 
+using namespace std; 
+inline int square(int x)
+{
+    return (x*x); 
+}
+int main() 
+{
+    cout << square(10); 
+    return 0; 
+}
+
+//Function overloading
+
+#include<iostream> 
+using namespace std; 
+void print(int i)
+{
+    cout << i << " ";
+}
+
+void print(string s)
+{
+    cout << s << " ";
+}
+int main() 
+{
+    print(10);
+    print("gfg");
+    return 0; 
+}
+
+//Default arguments
+
+#include<iostream> 
+using namespace std; 
+
+int add(int a, int b, int c = 0, int d = 0)
+{
+    return (a+b+c+d); 
+}
+int main() 
+{
+    cout << add(10,20,30); 
+    return 0; 
+}
+
+//Functions problems
+
+#include<iostream> 
+using namespace std; 
+
+void printDetails(string f_name, string l_name ="")
+{
+    cout << f_name << " ";
+    if(l_name!="") cout << l_name << endl; 
+}
+int main() 
+{
+    printDetails("Sandeep", "Jain");
+    printDetails("Shivam"); 
+    return 0; 
+}
+
+//
+
+#include<iostream> 
+using namespace std; 
+
+void fun(int x, int y, int z)
+{
+    cout << x << " " << y << 
+    " " << z << " "; 
+}
+
+int main() 
+{
+   int i = 2; 
+   fun(++i,++i,++i); 
+    return 0; 
+}
+
+//
+
+#include<iostream> 
+using namespace std; 
+void fun(int x)
+{
+    if(x==0)
+        return; 
+    else
+    {
+        cout << "Geeks" << " ";
+        fun(x-1); 
+        cout << "for geeks" << " ";
+    }
+}
+int main() 
+{
+    fun(3); 
+    return 0; 
+}
+
+//Stack overflow
+
+#include<iostream> 
+using namespace std; 
+
+int main() 
+{
+    cout << "geeks" << " ";
+    main(); 
+}
+
+//we should not declare default arguments in the middle so this below program shows error
+
+#include<iostream> 
+using namespace std; 
+int fun(int x, int y = 0, int z)
+{
+    return x+y+z; 
+}
+int main() 
+{
+    cout << fun(10,20,30); 
+}
+
+//it can be like this
+
+#include<iostream> 
+using namespace std; 
+int fun(int x, int y=0, int z = 0)
+{
+    return x+y+z; 
+}
+int main() 
+{
+    cout << fun(10,20,30); 
+}
+
+//
