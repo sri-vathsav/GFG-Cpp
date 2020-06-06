@@ -1,0 +1,78 @@
+//strcpy
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    char str[5];
+    strcpy(str, "gfg");
+    cout << str;
+    return 0;
+}
+
+//Sub string
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    string str = "geeksforgeeks";
+    cout << str.length() << " ";
+    str = str + "xyz";
+    cout << str << " ";
+    cout << str.substr(1, 3) << " ";
+    cout << str.find("eek") << " ";
+    return 0;
+}
+
+// string wil not take the words after space
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    string str;
+    cout << "Enter your name";
+    cin >> str;
+    cout << "\nYour name is " << str;
+    return 0;
+}
+
+//to overcome this we will use getline()
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    string str;
+    cout << "Enter your name";
+    getline(cin, str);
+    cout << "\nYour name is " << str;
+    return 0;
+}
+
+
+//getline()parameters
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    string str;
+    cout << "Enter your name";
+    getline(cin, str, 'a');
+    cout << "\nYour name is " << str;
+    return 0;
+}
+
+//
