@@ -1,0 +1,174 @@
+//getting the address
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    cout << (&x);
+    return 0;
+}
+
+//getting the value of the address
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    cout << (*(&x));
+    return 0;
+}
+
+//Intro to POINTERS
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    int *ptr = &x;
+    cout << *ptr << " ";
+    cout << ptr << " ";
+    return 0;
+}
+
+//
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    int *ptr = &x;
+    cout << *ptr << " ";
+    x = x + 30;
+    cout << *ptr << " ";
+    cout << ptr << " ";
+    *ptr = *ptr + 40;
+    cout << x << " ";
+    return 0;
+}
+
+//we should not declare pointer variable without assigning
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int *p1;
+    cout << p1 << " ";
+    cout << *p1 << " ";
+    return 0;
+}
+
+//
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int *p1;
+    double *p2;
+    string *p3;
+    cout << (sizeof p1) << " ";
+    cout << (sizeof p2) << " ";
+    cout << (sizeof p3) << " ";
+    return 0;
+}
+
+//swapping through pointers
+
+#include <iostream>
+using namespace std;
+
+void swap(int *p1, int *p2)
+    {
+        int temp = *p1;
+        *p1 = *p2;
+        *p2 = temp;
+    }
+int main()
+    {
+        int x = 10, y = 20;
+        swap(&x, &y);
+        cout << x << " " << y << " ";
+        return 0;
+    }
+    
+//
+
+#include <iostream>
+using namespace std;
+
+void fun(int *ptr, int n)
+    {
+        for (int i= 0; i<n; i++)
+            cout << ptr[i] << " ";
+    }
+int main()
+    {
+        int arr[] = {10, 20, 30, 40, 50};
+        fun(arr, 5);
+    }
+    
+//array pointers
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {1, 2, 3};
+    int *ptr = arr;
+    cout << sizeof(arr) << " ";
+    cout << sizeof(ptr) << " ";
+    return 0;
+}
+
+//increments and decrements
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20};
+    int *p1 = arr;
+    ++*p1;
+    cout << arr[0] << " " <<
+        arr[1] << " " << *p1;
+    return 0;
+}
+
+//
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20};
+    int *p2 = arr;
+    *p2++;
+    cout << arr[0] << " " <<
+        arr[1] << " " << *p2;
+    return 0;
+}
+
+//
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20};
+    int *p3 = arr;
+    cout << *++p3 << " ";
+    cout << arr[0] << " " <<
+        arr[1] << " " << *p3;
+    return 0;
+}
+
+
+//
+
+
+The end
